@@ -14,6 +14,53 @@ public class Team {
 
     public Team(){}
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getLoses() {
+        return loses;
+    }
+
+    public void setLoses(long loses) {
+        this.loses = loses;
+    }
+
+    public String getMascot() {
+        return mascot;
+    }
+
+    public void setMascot(String mascot) {
+        this.mascot = mascot;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    public long getWins() {
+        return wins;
+    }
+
+    public void setWins(long wins) {
+        this.wins = wins;
+    }
 
     @Override
     public String toString() {
@@ -36,22 +83,7 @@ public class Team {
         this.picture = picture;
         this.wins = wins;
     }
-    
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
 }

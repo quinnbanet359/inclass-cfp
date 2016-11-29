@@ -20,6 +20,9 @@ import java.util.List;
  */
 public class MainActivityFragment extends Fragment {
 
+    FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    DatabaseReference mRef = firebaseDatabase.getReference().child("teams");
+
     public MainActivityFragment() {
     }
 
@@ -28,9 +31,6 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference mRef = firebaseDatabase.getReference().child("");
 
         ListView lv = (ListView) view.findViewById(R.id.ListView);
         ListAdapter la = new FirebaseListAdapter<Team>(getActivity(),Team.class, R.layout.team_item_layout, mRef) {
